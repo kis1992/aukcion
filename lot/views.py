@@ -6,7 +6,7 @@ from lot import serializers, models
 class LotViews(APIView):
 
     class_serializer = serializers.LotSerializers
-    image =  models.Lot.objects.get(id=1).lot_image
+    image =  models.Lot.objects.get(id=2).lot_image
 
     def get(self, request):
         lots = models.Lot.objects.all()
@@ -27,7 +27,7 @@ class LotViews(APIView):
 class LotPutDelete(APIView):
 
     class_serializer = serializers.LotSerializers
-    image =  models.Lot.objects.get(id=1).lot_image
+    image =  models.Lot.objects.get(id=2).lot_image
 
     def query_get_lot_by_id(self,id):
         lot = None
